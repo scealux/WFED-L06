@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
      <head>
-          <title>Tutorial #13</title>
+          <title>Wasting Ammo</title>
           <meta charset="utf-8">
           <link href="styles.css" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
@@ -12,12 +12,13 @@
           <div id="vue-app">
                <div id="container">
                     <div id="testWindow">
-                         <div :style="rotateAngle2" id="boat">
-                              <div id="encap"></div>
+                         <div :style="rotateAngle2" id="cannon">
+                              <div id="lane"><div id="cannonBall"></div></div>
                          </div>
+                         <div id="endcap"><span><br />{{rotateAngle}}&#176;</span></div>
                          <div id="buttons">
                               <p>
-                                   {{rotateAngle}}
+
                               </p>
                               <button @click="turnCCW"><i class="fa fa-rotate-left fa-3x"></i></button>
                               <button @click="fire(rotateAngle)"><i class="fa fa-crosshairs fa-3x"></i></button>
