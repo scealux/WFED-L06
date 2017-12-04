@@ -1,4 +1,5 @@
 /*CSS*/
+
 #cannon{
      width: 50px;
      height: 100px;
@@ -7,20 +8,20 @@
      margin-left: -25px;
      bottom: 80px;
      /*margin: 0 auto;*/
-     background: brown;
+     background: #5bc499;
      transform: rotate(30deg);
      transform-origin: 50% 100%;
 }
 #lane{
-     height: 1300px;
-     margin-top: -1300px;
+     height: 1330px;
+     margin-top: -1330px;
      margin-left: 5px;
      background: ghostwhite;
-     width: 40px;
+     width: 0px;
 }
 #cannonBall {
      position: relative;
-     top: 1300px;
+     top: 0px;
      width:30px;
      height:30px;
      margin-left: 5px;
@@ -31,10 +32,10 @@
      font-family: 'Fredoka One', cursive;
      font-size: 1.1em;
      margin-top: 20px;
-     color: white;
+     color: #f0f0f0;
      text-align: center;
      position: fixed;
-     background: gray;
+     background: #546778;
      left: 50%;
      margin-left: -50px;
      bottom: 20px;
@@ -49,29 +50,54 @@ span {
      position: fixed;
      width: 100%;
      bottom: 0px;
-     background: gray;
+     background: #546778;
      text-align: center;
      margin: 0 auto;
      margin-left: -8px;
      padding: 15px 0;
 }
 button{
-     background: brown;
-     border: 3px solid lightgray;
+     background: #5bc499;
+     border: 3px solid #f0f0f0;
      border-radius: 50%;
 }
+#progressBar{
+     margin: 0 auto;
+     margin-top: 10px;
+     height: 10px;
+     padding: 5px;
+     width: 100px;
+     background: #546778;
+}
+#innerProgressBar{
+     height:10px;
+     width: 1%;
+     background: #5bc499;
+}
 i{
-     color: white;
+     color: #f0f0f0;
 }
 button:active{
-     background: darkred;
-     border: 3px solid darkgray;
+     background: #55b38c;
+     border: 3px solid #546778;
 }
 button:focus{
      outline: 0px;
 }
+#subTitle{
+     color:#778a9b;
+     font-size: .5em;
+}
+#timer {
+     padding-top: 30px;
+     color: #5bc499;
+     font-size: .75em;
+}
 p{
+     font-size: 2em;
+     padding-top: 20px;
+     text-align: center;
      font-family: 'Fredoka One', cursive;
-     color: white;
-     margin: 0px;
+     color: #546778;
+     margin: 0 auto;
 }

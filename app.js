@@ -1,4 +1,5 @@
 //Javascript
+var howFar = 1300;
 // register
 Vue.component('lane', {
   template: '<div>A custom component!</div>'
@@ -15,13 +16,13 @@ var theVue = new Vue({
      },
      methods: {
           turnCW: function(){
-               this.rotateAngle += 5;
+               this.rotateAngle += 10;
                if(this.rotateAngle>90){
                     this.rotateAngle = 90;
                }
           },
           turnCCW: function(){
-               this.rotateAngle -= 5;
+               this.rotateAngle -= 10;
                if(this.rotateAngle<-90){
                     this.rotateAngle = -90;
                }
@@ -31,10 +32,30 @@ var theVue = new Vue({
           },
           fire: function(angle){
                this.firing = true;
-               console.log("I have no idea how to get this cannon to fire");
-               //console.log(this.originX+' '+this.originY);
-               //var cannonBall = document.getElementById('cannonBall');
+               howFar = 1300;
+               var cannonBall = document.getElementById('cannonBall');
+               var progBar = document.getElementById('innerProgressBar');
                //console.log(cannonBall);
+               var startD = new Date();
+               var startTime = startD.getTime();
+               console.log('Started at '+ startTime);
+               (function myLoop (i) {
+                        setTimeout(function () {
+                             howFar -= 4;
+                             //console.log(howFar);
+                             progBar.style.width = (100-((howFar/1300)*100))+'%';
+                             cannonBall.style.top = howFar + 'px';
+                             if (howFar == 0){
+                                  var endD = new Date();
+                                  var endTime = endD.getTime();
+                                  console.log('Ended at '+endTime);
+                                  var timeDiff = (endTime - startTime)/1000;
+                                  document.getElementById('timer').innerHTML = 'Last shot took '+timeDiff+' seconds.';
+                                  console.log('Took '+timeDiff+" seconds.")
+                             }   //  your code here
+                             if (--i) myLoop(i);      //  decrement i and call myLoop again if i > 0
+                        },1)
+               })(325); //  pass the number of iterations as an argument
           }
      },
      computed:{
